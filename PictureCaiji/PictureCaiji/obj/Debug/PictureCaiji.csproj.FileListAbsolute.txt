@@ -1,0 +1,10 @@
+D:\MyDemoCode\PictureCaiji\PictureCaiji\bin\Debug\PictureCaiji.exe.config
+D:\MyDemoCode\PictureCaiji\PictureCaiji\bin\Debug\PictureCaiji.exe
+D:\MyDemoCode\PictureCaiji\PictureCaiji\bin\Debug\PictureCaiji.pdb
+D:\MyDemoCode\PictureCaiji\PictureCaiji\obj\Debug\PictureCaiji.csprojResolveAssemblyReference.cache
+D:\MyDemoCode\PictureCaiji\PictureCaiji\obj\Debug\PictureCaiji.Form1.resources
+D:\MyDemoCode\PictureCaiji\PictureCaiji\obj\Debug\PictureCaiji.Properties.Resources.resources
+D:\MyDemoCode\PictureCaiji\PictureCaiji\obj\Debug\PictureCaiji.csproj.GenerateResource.Cache
+D:\MyDemoCode\PictureCaiji\PictureCaiji\obj\Debug\PictureCaiji.exe
+D:\MyDemoCode\PictureCaiji\PictureCaiji\obj\Debug\PictureCaiji.pdb
+D:\MyDemoCode\PictureCaiji\PictureCaiji\bin\Debug\Newtonsoft.Json.dll
