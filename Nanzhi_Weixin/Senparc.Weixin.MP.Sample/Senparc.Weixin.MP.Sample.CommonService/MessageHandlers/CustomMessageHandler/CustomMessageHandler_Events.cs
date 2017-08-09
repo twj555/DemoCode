@@ -48,11 +48,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
             //获取Senparc.Weixin.MP.dll版本信息
             var fileVersionInfo = FileVersionInfo.GetVersionInfo(HttpContext.Current.Server.MapPath("~/bin/Senparc.Weixin.MP.dll"));
             var version = string.Format("{0}.{1}.{2}", fileVersionInfo.FileMajorPart, fileVersionInfo.FileMinorPart, fileVersionInfo.FileBuildPart);
-            return string.Format(
-@"欢迎关注【Senparc.Weixin.MP 微信公众平台SDK】，当前运行版本：v{0}。
-
-",
-                version);
+            return "入我门得我心者，永存";
         }
 
         public string GetDownloadInfo(CodeRecord codeRecord)

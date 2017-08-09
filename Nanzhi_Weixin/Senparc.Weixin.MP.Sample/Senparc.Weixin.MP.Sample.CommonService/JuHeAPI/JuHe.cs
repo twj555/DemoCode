@@ -245,6 +245,10 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI
 
             parameters.Add("key", "free");//你申请的key
             parameters.Add("appid", "0");
+            if (message.Contains("计算"))
+            {
+                message =System.Web.HttpContext.Current.Server.UrlEncode( message.Trim().Replace(" ", "+"));
+            }
             parameters.Add("msg", message);
 
             string result2 = sendPost(url, parameters, "get");
@@ -253,7 +257,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI
 
             if (msgJson != null)
             {
-                var msg=  msgJson.content.Replace("菲菲","唐唐");
+                var msg=  msgJson.content.Replace("菲菲","唐唐").Replace("{br}", "\r\n");
                 if (msg.Contains("唐唐在想") || msg.Contains("唐唐喜欢") || msg.Contains("唐唐爱"))
                 {
                     return "唐唐在想楠芷";
