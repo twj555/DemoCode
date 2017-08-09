@@ -1,0 +1,215 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>表单填写</title>
+    <link href="~/Content/css/sailfish.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    @*<link rel="stylesheet" type="text/css" href="http://js.40017.cn/cn/min/??/cn/public/jquery/sailfish/main/0.0.1/sailfish.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://js.40017.cn/cn/min/??/cn/public/jquery/dialog2/0.0.2/dialog2.css">
+    <link rel="stylesheet" type="text/css" href="http://js.40017.cn/cn/min/??/cn/public/jquery/verify/0.0.1/verify.css">*@
+
+
+</head>
+
+<body>
+
+    <div class="sf-panel">
+        <div class="sf-panel-head">
+            <span>个人信息填写</span>
+            <span class="sf-panel-toggle fa fa-angle-up"></span>
+        </div>
+        <div class="sf-panel-body">
+            <table class="sf-form-table" id="formTable">
+                <tbody>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>姓名</td>
+                        <td>
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-chnWord="请输入正确的姓名" vType="chnWord" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>工号</td>
+                        <td>
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-number="请输入正确的工号" vType="number" maxlength="5" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>部门</td>
+                        <td>
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-chnWord="请输入正确的部门" vType="chnWord" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>归属公司</td>
+                        <td>
+                            <select class="sf-input" data-err-rq="此项为必填项" data-err-number="请选择归属公司" vType="number">
+                                <option value="">-请选择归属公司-</option>
+                                <option value="0">同程旅游</option>
+                                <option value="1">同程国旅</option>
+                                <option value="2">同程网络</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>入职时间</td>
+                        <td>
+                            <input class="sf-input" data-err-rq="此项为必填项" vType="dateFn" data-err-dateFn="入职时间格式为YYYY-mm-dd" vFn="dateFn" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>年龄</td>
+                        <td>
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-number="请输入正确的年龄" vType="number" maxlength="3" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>性别</td>
+                        <td>
+                            <span class="gender-wrap" data-err-rq="此项为必填项" data-err-gender="请选择性别" vType="gender" vFn="genderFn">
+                                <label class="sf-radio">
+                                    <input type="radio" name="gender" value="0" />
+                                    <i></i>
+                                    男
+                                </label>
+                                <label class="sf-radio">
+                                    <input type="radio" name="gender" value="1" />
+                                    <i></i>
+                                    女
+                                </label>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>备注</td>
+                        <td>
+                            <textarea class="sf-input fl" data-err-rq="此项为必填项" vType="remark" data-err-remark="输入20字以内" vFn="markFn"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"></td>
+                        <td>
+                            <button class="sf-button mr15">提交</button>
+                            <button class="sf-secondary">取消</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="sf-panel">
+        <div class="sf-panel-head">
+            <span>个人信息填写(多列布局)</span>
+            <span class="sf-panel-toggle fa fa-angle-up"></span>
+        </div>
+        <div class="sf-panel-body">
+            <table class="sf-form-table" id="formTable2">
+                <tbody>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>姓名</td>
+                        <td class="w200">
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-chnWord="请输入正确的姓名" vType="chnWord" />
+                        </td>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>工号</td>
+                        <td>
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-number="请输入正确的工号" vType="number" maxlength="5" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>部门</td>
+                        <td class="w200">
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-chnWord="请输入正确的部门" vType="chnWord" />
+                        </td>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>归属公司</td>
+                        <td>
+                            <select class="sf-input" data-err-rq="此项为必填项" data-err-number="请选择归属公司" vType="number">
+                                <option value="">-请选择归属公司-</option>
+                                <option value="0">同程旅游</option>
+                                <option value="1">同程国旅</option>
+                                <option value="2">同程网络</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>入职时间</td>
+                        <td class="w200">
+                            <input class="sf-input" data-err-rq="此项为必填项" vType="dateFn" data-err-dateFn="入职时间格式为YYYY-mm-dd" vFn="dateFn" />
+                        </td>
+                        <td class="sf-table-key"><span class="sf-rq">*</span>年龄</td>
+                        <td>
+                            <input class="sf-input" data-err-rq="此项为必填项" data-err-number="请输入正确的年龄" vType="number" maxlength="3" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key">手机号码</td>
+                        <td class="w200">
+                            <input class="sf-input" vRq="false" vType="mobile" data-err-mobile="请输入正确的手机号码" />
+                        </td>
+                        <td class="sf-table-key">家庭住址</td>
+                        <td>
+                            <input class="sf-input" vRq="false" data-err-chn="请输入正确的地址" vType="chn" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key">专业特长</td>
+                        <td class="w200">
+                            <label class="sf-checkbox">
+                                <input type="checkbox" />
+                                <i></i>
+                                写代码
+                            </label>
+                            <label class="sf-checkbox">
+                                <input type="checkbox" />
+                                <i></i>
+                                debug
+                            </label>
+                        </td>
+                        <td class="sf-table-key">业余爱好</td>
+                        <td>
+                            <label class="sf-checkbox">
+                                <input type="checkbox" />
+                                <i></i>
+                                吃苹果
+                            </label>
+                            <label class="sf-checkbox">
+                                <input type="checkbox" />
+                                <i></i>
+                                吃香蕉
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key">备注</td>
+                        <td colspan="3">
+                            <textarea class="sf-input fl" vRq="false" data-err-rq="此项为必填项" vType="remark" data-err-remark="输入20字以内" vFn="markFn"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sf-table-key"></td>
+                        <td>
+                            <button class="sf-button mr15">提交</button>
+                            <button class="sf-secondary">取消</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    @*<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://js.40017.cn/cn/min/??/cn/public/jquery/sailfish/main/0.0.1/sailfish.js?v=20160704"></script>
+    <script type="text/javascript" src="http://js.40017.cn/cn/min/??/cn/public/jquery/dialog2/0.0.2/dialog2.js"></script>
+    <script type="text/javascript" src="http://js.40017.cn/cn/min/??/cn/public/jquery/verify/0.0.2/verify.js"></script>
+    <script type="text/javascript" src="../src/pageFiles/formTable/formTable.js"></script>*@
+
+
+    <script src="~/Content/js/jquery-1.9.1.min.js"></script>
+    <script src="~/Content/js/sailfish.js"></script>
+
+</body>
+</html>

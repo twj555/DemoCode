@@ -1,0 +1,172 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>旗鱼框架 -- sailfish based on jquery</title>
+    <link href="~/Content/css/sailfish.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body class="sf-body sf-plumb">
+
+    <!-- 框架容器 -->
+    <div class="sf-page">
+
+        <!-- 左侧容器 -->
+        <div class="sf-left-bar">
+            <h3><i class="fa fa-envelope-open-o"></i><span>旗鱼框架</span></h3>
+
+            <!-- 左侧导航菜单 -->
+            <ul class="sf-menu" id="sfMenu">
+                <li>
+                    <a href="iIndex.html"><i class="fa fa-home"></i><span>首页</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-list-ul"></i>
+                        <span>列表页面</span>
+                        <i class="fa fa-angle-down sf-menu-arrow"></i>
+                    </a>
+                    <ul>
+                        <li><a href="search.html"><span>搜索列表页面</span><em class="sf-badge">10条消息</em></a></li>
+                        <li><a href="list.html"><span>带选择的列表</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="btns.html">
+                        <i class="fa fa-arrows-alt"></i><span>按钮</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html"><i class="fa fa-calendar-plus-o"></i><span>日历示例</span></a>
+                </li>
+                <li>
+                    <a href="form-table.html"><i class="fa fa-wpforms"></i><span>表单填写</span></a>
+                </li>
+                <li>
+                    <a href="select2.html"><i class="fa fa-sort-amount-asc"></i><span>下拉框示例</span></a>
+                </li>
+                <li>
+                    <a href="tip.html"><i class="fa fa-toggle-off"></i><span>提示框示例</span></a>
+                </li>
+                <li>
+                    <a href="grid.html"><i class="fa fa-table"></i><span>栅格</span></a>
+                </li>
+                <li>
+                    <a href="step.html"><i class="fa fa-list-ol"></i><span>步骤条</span></a>
+                </li>
+                <li>
+                    <a href="tree.html"><i class="fa fa-sort-amount-asc"></i><span>树组件</span></a>
+                </li>
+                <li>
+                    <a href="tab.html"><i class="fa fa-columns"></i><span>tab示例</span></a>
+                </li>
+                <li>
+                    <a href="dialog.html"><i class="fa fa-files-o"></i><span>弹窗示例</span></a>
+                </li>
+                <li>
+                    <a href="404.html"><i class="fa fa-times"></i><span>404页面</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-cubes"></i>
+                        <span>多级菜单示例</span>
+                        <i class="fa fa-angle-down sf-menu-arrow"></i>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:;"><span>二级菜单</span></a></li>
+                        <li><a href="search.html?a=aaa157b"><span>search.html?a=aaa</span></a></li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>二级菜单</span>
+                                <i class="fa fa-angle-down sf-menu-arrow"></i>
+                            </a>
+                            <ul>
+                                <li><a href="btns.html?a=abc"><span>三级菜单链接</span></a></li>
+                                <li><a href="javascript:;"><span>三级菜单cc</span></a></li>
+                                <li><a href="javascript:;"><span>三级菜单ccc</span></a></li>
+                                <li><a href="javascript:;"><span>三级菜单ccc</span></a></li>
+                                <li><a href="javascript:;"><span title="如果文字很多很多的话会出现省略号">如果文字很多很多的话会出现省略号</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;"><span>二级菜单d</span></a></li>
+                        <li><a href="javascript:;"><span>二级菜单e</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 框架内容容器 -->
+        <div class="sf-main">
+            <div class="sf-top-bar">
+                <div class="sf-tool">
+                    <i class="fa fa-bars" id="scaleBtn"></i>
+                    <p class="sf-menu-txt">菜单</p>
+                    <span>|</span>
+                    <input class="sf-top-search" placeholder="搜索..." />
+                </div>
+                <div id="sfNotice">这里可以写点公告提示</div>
+                <ul>
+                    <li><i id="sfRefresh" class="fa fa-refresh" title="刷新"></i></li>
+                    <li><i class="fa fa-map"></i></li>
+                    <li>
+                        <i class="fa fa-user-o"></i>
+                        您好, 公共前端组 Admin
+                        <i class="fa fa-caret-down"></i>
+                        <div class="sf-login-info">
+                            <p></p>
+                            <div class="info-content">
+                                <a href="javascript:;">个人中心</a>
+                                <a href="javascript:;">我的设置</a>
+                                <a href="http://authority.17usoft.com/Account/Changepassword" target="_blank">修改密码</a>
+                                <a href="javascript:;">登出</a>
+                                <a href="javascript:;" id="sfSkinWrap">
+                                    <span class="sf-skin-default cur" data-skin="default"></span>
+                                    <span class="sf-skin-blue" data-skin="blue"></span>
+                                    <span class="sf-skin-orange" data-skin="orange"></span>
+                                    <label class="sf-checkbox fl"><input type="checkbox" id="sfLayoutBtn" checked><i></i> 垂直</label>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 页面tab -->
+            <!-- <ul class="sf-crumb" id="sfCrumb"></ul> -->
+            <div class="sf-multi-tab">
+                <span class="move-btn fa fa-angle-left"></span>
+                <div class="clearfix sf-mtab" id="sfMtab">
+                    <ul id="sfPageTab">
+                        <li class="sf-active"><span>首页</span> <i class="sf-close-sm"></i></li>
+                    </ul>
+                </div>
+                <span class="move-btn fa fa-angle-right"></span>
+                <div class="sf-more-wrap" id="sfPageTabHandler">
+                    <p class="fa fa-ellipsis-v"></p>
+                    <ul class="sf-more-cont">
+                        <li class="sf-close-other">关闭其他标签</li>
+                        <li class="sf-close-active">关闭当前标签</li>
+                        <li class="sf-find-active">定位当前标签</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 框架容器: 使用多iframe, 需要在给容器添加 id="sfIframeWrap" -->
+            <div class="sf-iframe-wrap" id="sfIframeWrap">
+                <iframe src="About" class="sf-tframe sf-tframe-active"></iframe>
+            </div>
+
+            <!-- 页脚 -->
+            <div class="sf-footer">© 2002-2017 同程网络科技股份有限公司</div>
+        </div>
+    </div>
+
+
+    <script src="~/Content/js/jquery-1.9.1.min.js"></script>
+    <script src="~/Content/js/sailfish.js"></script>
+
+</body>
+</html>
