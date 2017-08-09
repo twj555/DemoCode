@@ -30,7 +30,11 @@ namespace Senparc.Weixin.MP.Sample.Controllers
         public ActionResult Index()
         {
 
+<<<<<<< HEAD
             return Content(Senparc.Weixin.MP.Sample.CommonService.JuHeAPI.JuHe.GetXiaohua(""));
+=======
+            return Content(Senparc.Weixin.MP.Sample.CommonService.JuHeAPI.JuHe.GetXiaohua());
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
 
             //Func<string, FileVersionInfo> getFileVersionInfo = dllFileName =>
             //    FileVersionInfo.GetVersionInfo(Server.MapPath("~/bin/" + dllFileName));

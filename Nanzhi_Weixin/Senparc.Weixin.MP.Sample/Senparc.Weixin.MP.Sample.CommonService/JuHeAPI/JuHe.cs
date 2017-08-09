@@ -13,19 +13,59 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI
 {
     public class JuHe
     {
+<<<<<<< HEAD
        public  static string GetXiaohua(string ptype)
+=======
+       public  static string GetXiaohua()
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
         {
             string appkey = "158af5886125ed42820e14a4212bb378"; //配置您申请的appkey
 
 
+<<<<<<< HEAD
+=======
+            ////1.按更新时间查询笑话
+            //string url1 = "http://japi.juhe.cn/joke/content/list.from";
+
+            //var parameters1 = new Dictionary<string, string>();
+
+            //parameters1.Add("sort", ""); //类型，desc:指定时间之前发布的，asc:指定时间之后发布的
+            //parameters1.Add("page", ""); //当前页数,默认1
+            //parameters1.Add("pagesize", ""); //每次返回条数,默认1,最大20
+            //parameters1.Add("time", ""); //时间戳（10位），如：1418816972
+            //parameters1.Add("key", appkey);//你申请的key
+
+            //string result1 = sendPost(url1, parameters1, "get");
+
+            //JsonObject newObj1 = new JsonObject(result1);
+            //String errorCode1 = newObj1["error_code"].Value;
+
+            //if (errorCode1 == "0")
+            //{
+            //    Debug.WriteLine("成功");
+            //    Debug.WriteLine(newObj1);
+            //}
+            //else
+            //{
+            //    //Debug.WriteLine("失败");
+            //    Debug.WriteLine(newObj1["error_code"].Value + ":" + newObj1["reason"].Value);
+            //}
+
+
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
             //2.随机笑话
             string url2 = "http://v.juhe.cn/joke/randJoke.php";
 
             var parameters2 = new Dictionary<string, string>();
+<<<<<<< HEAD
             if (ptype == "趣图")
             {
                 parameters2.Add("type", ptype);
             }
+=======
+
+        
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
             parameters2.Add("key", appkey);//你申请的key
 
             string result2 = sendPost(url2, parameters2, "get");
@@ -34,6 +74,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI
 
             if (msgJson != null && msgJson.Result != null &&  msgJson.Result.Length > 0)
             {
+<<<<<<< HEAD
                 if (ptype == "趣图")
                 {
                     return msgJson.Result[0].Url;
@@ -43,6 +84,9 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI
                 {
                     return msgJson.Result[0].Content;
                 }
+=======
+                return msgJson.Result[0].Content;
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
             }
             else
             {
@@ -231,6 +275,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI
                 if (rsp != null) rsp.Close();
             }
         }
+<<<<<<< HEAD
 
 
 
@@ -271,6 +316,8 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI
         }
 
 
+=======
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
     }
 
 }

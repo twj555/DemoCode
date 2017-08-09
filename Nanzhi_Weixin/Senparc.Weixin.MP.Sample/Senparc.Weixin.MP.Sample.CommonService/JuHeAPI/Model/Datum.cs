@@ -23,10 +23,13 @@ namespace Senparc.Weixin.MP.Sample.CommonService.JuHeAPI.Model
 
         [JsonProperty("updatetime")]
         public string Updatetime { get; set; }
+<<<<<<< HEAD
 
 
         [JsonProperty("url")]
         public string Url { get; set; }
+=======
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
     }
 
 }

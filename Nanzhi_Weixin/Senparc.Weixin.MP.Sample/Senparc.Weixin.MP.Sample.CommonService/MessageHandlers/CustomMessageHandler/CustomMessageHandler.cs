@@ -171,6 +171,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
                 //关键字不区分大小写，按照顺序匹配成功后将不再运行下面的逻辑                
                 .Keyword("笑话", () =>
                 {
+<<<<<<< HEAD
                   defaultResponseMessage.Content = Senparc.Weixin.MP.Sample.CommonService.JuHeAPI.JuHe.GetXiaohua("笑话");                    
                   return defaultResponseMessage;
                 }).LikeKeyword("图", () =>
@@ -201,6 +202,10 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
                 {
                     defaultResponseMessage.Content = Senparc.Weixin.MP.Sample.CommonService.DynamicMessage.ReadAndWriteKeyword.Write(requestMessage.Content.Replace("关键词设定=", ""));
                     return defaultResponseMessage;
+=======
+                  defaultResponseMessage.Content = Senparc.Weixin.MP.Sample.CommonService.JuHeAPI.JuHe.GetXiaohua();                    
+                  return defaultResponseMessage;
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
                 })
                 .Keyword("AsyncTest", () =>
                 {
@@ -288,6 +293,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
                 //Default不一定要在最后一个
                 .Default(() =>
                 {
+<<<<<<< HEAD
 
                     // Senparc.Weixin.MP.Sample.CommonService.DynamicMessage.ReadAndWriteKeyword.Write(requestMessage.Content.Replace("关键词设定=", ""));
                     defaultResponseMessage.Content = Senparc.Weixin.MP.Sample.CommonService.DynamicMessage.ReadAndWriteKeyword.Read(requestMessage.FromUserName,requestMessage.Content);
@@ -295,6 +301,12 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
                     {
                         defaultResponseMessage.Content = Senparc.Weixin.MP.Sample.CommonService.JuHeAPI.JuHe.GetJiqiren(requestMessage.Content);
                     }
+=======
+                    var result = new StringBuilder();
+                    result.AppendFormat("您刚才发送了文字信息：{0}\r\n\r\n", requestMessage.Content);
+                  
+                    defaultResponseMessage.Content = result.ToString();
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
                     return defaultResponseMessage;
                 })
                 //正则表达式

@@ -68,11 +68,17 @@
     <Compile Include="Download\CodeRecord.cs" />
     <Compile Include="Download\Config.cs" />
     <Compile Include="Download\ConfigHelper.cs" />
+<<<<<<< HEAD
     <Compile Include="DynamicMessage\ReadAndWriteKeyword.cs" />
     <Compile Include="JuHeAPI\JuHe.cs" />
     <Compile Include="JuHeAPI\Model\Datum.cs" />
     <Compile Include="JuHeAPI\Model\Result.cs" />
     <Compile Include="JuHeAPI\Model\JiqirenResponse.cs" />
+=======
+    <Compile Include="JuHeAPI\JuHe.cs" />
+    <Compile Include="JuHeAPI\Model\Datum.cs" />
+    <Compile Include="JuHeAPI\Model\Result.cs" />
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
     <Compile Include="JuHeAPI\Model\XiaoHuaResponse.cs" />
     <Compile Include="MessageHandlers\CustomMessageHandler\CustomMessageContext.cs" />
     <Compile Include="MessageHandlers\CustomMessageHandler\CustomMessageHandler.cs" />
@@ -128,7 +134,10 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup />
+=======
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

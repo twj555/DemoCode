@@ -22,6 +22,7 @@ using Senparc.Weixin.MP.Helpers;
 using Senparc.Weixin.MP.MessageHandlers;
 using Senparc.Weixin.MP.Sample.CommonService.Download;
 using Senparc.Weixin.MP.Sample.CommonService.Utilities;
+<<<<<<< HEAD
 /*
     ((`'-"` `""-'`))
 　　 )　-　　-　 (
@@ -36,6 +37,9 @@ using Senparc.Weixin.MP.Sample.CommonService.Utilities;
 　_\\'#.　　　.#'//_
 　　(((___)'#'(___
      */
+=======
+
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
 namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
 {
     /// <summary>
@@ -48,7 +52,55 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
             //获取Senparc.Weixin.MP.dll版本信息
             var fileVersionInfo = FileVersionInfo.GetVersionInfo(HttpContext.Current.Server.MapPath("~/bin/Senparc.Weixin.MP.dll"));
             var version = string.Format("{0}.{1}.{2}", fileVersionInfo.FileMajorPart, fileVersionInfo.FileMinorPart, fileVersionInfo.FileBuildPart);
+<<<<<<< HEAD
             return "入我门得我心者，永存";
+=======
+            return string.Format(
+@"欢迎关注【Senparc.Weixin.MP 微信公众平台SDK】，当前运行版本：v{0}。
+您可以发送【文字】【位置】【图片】【语音】等不同类型的信息，查看不同格式的回复。
+
+您也可以直接点击菜单查看各种类型的回复。
+还可以点击菜单体验微信支付。
+
+SDK官方地址：https://weixin.senparc.com
+SDK Demo：http://sdk.weixin.senparc.com
+源代码及Demo下载地址：https://github.com/JeffreySu/WeiXinMPSDK
+Nuget地址：https://www.nuget.org/packages/Senparc.Weixin.MP
+QQ群：342319110
+
+===============
+更多：
+
+1、JSSDK测试：http://sdk.weixin.senparc.com/WeixinJSSDK
+
+2、开放平台测试（建议PC上打开）：http://sdk.weixin.senparc.com/OpenOAuth/JumpToMpOAuth
+
+3、回复关键字：
+
+【open】   进入第三方开放平台（Senparc.Weixin.Open）测试
+
+【tm】     测试异步模板消息
+
+【openid】 获取OpenId等用户信息
+
+【约束】   测试微信浏览器约束
+
+【AsyncTest】 异步并发测试
+
+【错误】    体验发生错误无法返回正确信息
+
+【容错】    体验去重容错
+
+【ex】      体验错误日志推送提醒
+
+【mute】     不返回任何消息，也无出错信息
+
+【jssdk】    测试JSSDK图文转发接口
+
+格式：【数字#数字】，如2010#0102，调用正则表达式匹配
+",
+                version);
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
         }
 
         public string GetDownloadInfo(CodeRecord codeRecord)

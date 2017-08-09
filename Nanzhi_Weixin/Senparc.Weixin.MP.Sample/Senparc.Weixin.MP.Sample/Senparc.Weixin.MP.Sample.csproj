@@ -249,8 +249,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+<<<<<<< HEAD
     <Content Include="App_Data\oSYOi0Uts_tS5ootm892zKDmMd4U.data" />
     <None Include="App_Data\Keywords.data" />
+=======
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Images\crowdfunding-qrcode.png" />

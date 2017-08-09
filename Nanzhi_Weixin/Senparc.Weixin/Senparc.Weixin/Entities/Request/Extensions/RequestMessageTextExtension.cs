@@ -72,6 +72,7 @@ namespace Senparc.Weixin.Entities.Request
             return handler.ResponseMessage;
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// 匹配关键词
         /// </summary>
@@ -89,6 +90,8 @@ namespace Senparc.Weixin.Entities.Request
             }
             return handler;
         }
+=======
+>>>>>>> 32c0e0dc2daf18518a88d23ac338c13b4cdde380
 
         /// <summary>
         /// 匹配关键词
